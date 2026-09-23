@@ -1,37 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Order summary card</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 0.6875rem; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+  <main class="order-card">
+    <img class="order-card__hero" src="./images/illustration-hero.svg" alt="">
 
-  Order Summary
+    <h1 class="order-card__title">Order Summary</h1>
 
-  You can now listen to millions of songs, audiobooks, and podcasts on any 
-  device anywhere you like!
+    <p class="order-card__description">
+      You can now listen to millions of songs, audiobooks, and podcasts on any
+      device anywhere you like!
+    </p>
 
-  Annual Plan
-  $59.99/year
+    <div class="annual-plan">
+      <img class="annual-plan__icon" src="./images/icon-music.svg" alt="">
 
-  Change
+      <div class="annual-plan__details">
+        <p class="annual-plan__name">Annual Plan</p>
+        <p class="annual-plan__price">$59.99/year</p>
+      </div>
 
-  Proceed to Payment
-  Cancel Order
-  
+      <a class="annual-plan__change" href="#">Change</a>
+    </div>
+
+    <button class="payment-button" type="button">
+      Proceed to Payment
+    </button>
+
+    <button class="cancel-button" type="button">
+      Cancel Order
+    </button>
+  </main>
+
   <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by
+    <a href="https://www.frontendmentor.io/profile/alexandre-delsol">
+      Frontend Mentor
+    </a>.
+    Coded by
+    <a href="https://github.com/alexandre-delsol">
+      Alexandre DELSOL
+    </a>.
   </footer>
 </body>
+
 </html>
