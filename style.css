@@ -1,0 +1,162 @@
+:root {
+    --color-light-blue: hsl(225, 100%, 94%);
+    --color-dark-blue: hsl(245, 75%, 52%);
+
+    --color-light-neutral-blue: hsl(225, 100%, 98%);
+    --color-gray: hsl(224, 23%, 55%);
+    --color-darker-neutral-blue: hsl(223, 47%, 23%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+body {
+    font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    background-color: var(--color-light-blue);
+    background-image: url("./images/pattern-background-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.order-card {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0px 13px 25px 5px rgba(0, 0, 0, 0.1);
+}
+
+.order-card__title,
+.annual-plan__name {
+    color: var(--color-darker-neutral-blue);
+    font-weight: 900;
+}
+
+.order-card__description,
+.annual-plan__price,
+.cancel-button {
+    color: var(--color-gray);
+}
+
+.order-card__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 2rem;
+}
+
+.order-card__description {
+    text-align: center;
+}
+
+.annual-plan {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: var(--color-light-neutral-blue);
+    border-radius: 10px;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.annual-plan__change {
+    margin-left: auto;
+    font-weight: 700;
+}
+
+a {
+    &:hover {
+        text-decoration: none;
+        color: var(--color-dark-blue);
+    }
+}
+
+.payment-button {
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    font-weight: 700;
+    background-color: var(--color-dark-blue);
+    box-shadow: 0px 13px 26px 16px rgba(0, 0, 0, 0.15);
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.cancel-button {
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    background: none;
+
+    &:hover {
+        color: var(--color-darker-neutral-blue);
+    }
+}
+
+.attribution {
+    font-size: 0.6875rem;
+    text-align: center;
+    color: var(--color-gray);
+    
+}
+
+@media (min-width: 600px) {
+    body {
+        background-image: url("./images/pattern-background-desktop.svg");
+    }
+
+    main {
+        max-width: 400px;
+    }
+}
